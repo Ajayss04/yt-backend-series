@@ -5,4 +5,10 @@ import dotenv from "dotenv";
 
 dotenv.config({path: "./env"})
 
-connectDB();
+connectDB()
+.then(
+    app.listen()
+)
+.catch( (err) => {
+    "Mongo DB connection failed !!!", (err)
+})
